@@ -4,29 +4,33 @@ let teamtwoShootButton = document.querySelector("#teamtwo-shoot-button")
 let teamoneShots = document.querySelector("#teamone-numshots")
 let teamtwoShots = document.querySelector("#teamtwo-numshots")
 let resets = document.querySelector("#reset-button")
-let resetNumber = document.querySelector("num-resets")
+let resetNumber = document.querySelector("#num-resets")
 let teamOneShoots = 0
 let teamTwoShoots = 0
-let teamOneGoals = document.querySelector("teamone-numgoals")
-let teamTwoGoals = document.querySelector("teamtwo-numgoals")
+let tg
+let teamOneGoals = document.querySelector("#teamone-numgoals")
+let teamTwoGoals = document.querySelector("#teamtwo-numgoals")
 teamoneShootButton.addEventListener("click", function() {
-    teamoneShots.innerHTML = teamOneShoots += 1
-    var random = Math.random( ) * 1; 
+    teamoneShots.innerHTML = teamOneShoots ++ 
     
-    if (random > .5 );{
-        teamOneGoals = + 1
+   tg = Number(teamOneGoals.innerHTML)
+    if (Math.random() > .5 ){
+        tg ++
+        teamOneGoals.innerHTML = tg
      }
     
-    console.log(random)
+    console.log(tg)
 })
 teamtwoShootButton.addEventListener("click", function()  {
-    teamtwoShots.innerHTML = teamTwoShoots += 1
-    var random = Math.random( ) * 1;
-    if (random > .5){
-
+    teamtwoShots.innerHTML = teamTwoShoots ++
+    
+    tg = Number(teamTwoGoals.innerHTML)
+    if (Math.random() > .5){
+      tg ++
+      teamTwoGoals.innerHTML = tg
     }
     
-    console.log(random)
+    console.log(tg)
 
     if (teamOneGoals > teamTwoGoals){
            "Team 1 wins";}
@@ -34,13 +38,13 @@ teamtwoShootButton.addEventListener("click", function()  {
             "tie";}
     else{
           "Team 2 wins";}
-
-
+      
 })
-resets.addEventListener("click", function(){
-  resets.innerHTML = teamOneGoals +=0
-  resets.innerHTML = teamTwoGoals +=0
-  resets.innerHTML = teamoneShots +=0
-  resets.innerHTML = teamtwoShots +=0
-  resets.innerHTML = 1
-})
+resets.addEventListener("click", function()
+{
+  teamOneGoals.innerHTML = resets = 0
+  teamTwoGoals.innerHTML = resets = 0
+  teamoneShots.innerHTML = resets = 0
+  teamtwoShots.innerHTML = resets = 0
+   resetNumber.innerHTML = resets =+ 1
+}) 
